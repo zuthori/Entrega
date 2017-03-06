@@ -1,0 +1,19 @@
+package br.senac.tads.Servicos;
+
+import br.senac.tads.agenda.contato.Contato;
+import br.senac.tads.agenda.dao.DaoContato;
+import java.util.List;
+
+public class ServicoAgenda {
+    public static void addAgenda(Contato agenda) throws Exception {        
+        DaoContato.inserir(agenda);
+    }
+    
+    /*    public static void addCliente(Cliente cliente) throws Exception {
+    DaoCliente.inserir(cliente);
+    }*/
+
+    public static List<Contato> listar() throws Exception {
+     return DaoContato.listar();
+    }
+}
